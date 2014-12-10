@@ -43,7 +43,7 @@ class syslog_ng::logrotate (
     mode    => $syslog_ng::config_file_mode,
     owner   => $syslog_ng::config_file_owner,
     group   => $syslog_ng::config_file_group,
-    require => Package['syslog_ng'],
+    require => Package[$syslog_ng::package],
     source  => $manage_file_source,
     content => $manage_file_content,
     replace => $syslog_ng::manage_file_replace,
