@@ -21,7 +21,7 @@
 # }
 #
 class syslog_ng::logrotate (
-  $file     = params_lookup( 'logrotate_file' ),
+  $file     = $syslog_ng::logrotate_file,
   $source   = params_lookup( 'source' ),
   $template = params_lookup( 'template' ),
 ) {
